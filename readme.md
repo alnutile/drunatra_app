@@ -52,3 +52,5 @@ vendor
   drupal/core <--composer would pull core into here
 composer.json
 ~~~
+
+This will also pull in the alnutile/drunatra repo which actually might be the wrapper around core we use to sync up and manage the difference between core and drunatra
