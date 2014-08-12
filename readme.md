@@ -1,16 +1,52 @@
-# Setup
+# Drunatra 
 
-there is an .env_boot.php file in the root folder. This sets you environment by returning
-'local' or 'prod' etc.
+The goal is to make a micro framework that uses the Silex routing system, Drupal Entity API/ORM 
 
-then there is a .env file to set the variables for your machine/server.
 
-This would be
+The routing will be micro framework style to build out CRUD(i) applications quickly and the ORM would be dependency injected allowing the use of Illumnite\Elloquent, Doctrine as well as Entity Api
 
-~~~
-DB_HOST=localhost
-DB_USER=foo
-DB_PASS=bar
-~~~
+Composer would be use to pull in D8 core and it would be a 100% compaitable version of core just setup differently.
 
-etc. This helps to easily setup variables per setup but keeps it out of git.
+The layout of folders and files will be more like other frameworks so that Gulp, Grunt, Bower and other tools just work as normal.
+
+Using drush and phpmig there are tools to run migrations and seed the database for either style of ORM.
+
+
+
+app/
+  storage
+    logs
+    cache
+    private
+  modules <--for module compatibility
+  assets
+  controllers
+  models
+  views
+  config
+    local
+    development
+    testing
+    production
+boostrap
+  start.php
+database
+  migrations
+  seeds
+tests
+  behat
+  unit
+bin
+  phpmig
+  phpunit
+public
+  assets
+    img
+    js
+  index.php
+  robot.txt
+  .htaccess
+
+vendor
+  drupal/core <--composer would pull core into here
+composer.json
