@@ -15,6 +15,7 @@ Using drush and phpmig there are tools to run migrations and seed the database f
 ~~~
 
 app/
+  route.php
   storage
     logs
     cache
